@@ -74,8 +74,7 @@ namespace SolidExercices.Tests
         public void Exceptions()
         {
             var calculator = new Calculator();
-            Check.ThatCode(() => calculator.Calculate("50")).Throws<NotImplementedException>();
-            
+            Check.ThatCode(() => calculator.Calculate("abcd")).Throws<NotImplementedException>();
         }
     }
 }

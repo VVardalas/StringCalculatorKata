@@ -52,9 +52,9 @@ namespace SolidExercices
             else
             {
                 throw new NotImplementedException();
-                
+
             }
-            
+
             return result;
 
             /*throw new NotImplementedException();*/
