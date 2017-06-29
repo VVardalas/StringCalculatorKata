@@ -17,13 +17,13 @@ A LA FIN DU TP: pensez à pousser vos commits sur votre compte GitHub et envoyer 
 Réponses aux questions posées
 -----------------------------
 
-Q1) On peut définir des classes avec des comportements répondants à nos attentes pour éviter la redondance de conditions
+Q1) On peut définir des classes avec des comportements répondants à nos attentes pour éviter la redondance de conditions et une interface
 
-Q2) Le but des objets est qu'ils contiennent à la fois des données et des comportements
+Q2) Chaque classe doit posséder un comportements et des données
 
-Q3)
+Q3) L'encapsulation des données, ne pas donner accès à ce dont une classe n'a pas besoin
 
-Q4)
+Q4) Les données sont saisies en dur dans le calculTrainer
 
 Q5)
 

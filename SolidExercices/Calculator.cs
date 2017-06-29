@@ -70,17 +70,25 @@ namespace SolidExercices
 
         public decimal Calculate(string operations)
         {
-            foreach (var operation in _operations)
+            try
             {
-                if (operation.CanCalcul(operations))
+                foreach (var operation in _operations)
                 {
-                    return operation.Calculate(operations);
-                }
-                else
-                {
-                    throw new NotImplementedException();
+                    if (operation.CanCalcul(operations))
+                    {
+                        return operation.Calculate(operations);
+                    }
+                    
                 }
             }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+                
+            throw new ArgumentOutOfRangeException();
+                
         }
     }
 }

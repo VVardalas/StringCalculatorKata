@@ -22,7 +22,15 @@ namespace SolidExercices
                 result = Convert.ToDecimal(numbers[0]);
                 for (int i = 1; i < numbers.Length; i++)
                 {
-                    result /= Convert.ToDecimal(numbers[i]);
+                    try
+                    {
+                        result /= Convert.ToDecimal(numbers[i]);
+                    }
+                    catch (DivideByZeroException e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                   
                 }
             }
             return result;
