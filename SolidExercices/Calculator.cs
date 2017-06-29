@@ -1,13 +1,23 @@
 ﻿using System;
 using System.Linq;
+using System.Data;//import this namespace
 
 namespace SolidExercices
 {
     public class Calculator
     {
-        public double Calculate(string operation)
+        public decimal Calculate(string operation)
         {
-            throw new NotImplementedException();
+            
+            string[] numbers = operation.Split('+');
+            decimal result = 0;
+            foreach (var number in numbers)
+            {
+                result += Convert.ToDecimal(number);
+            }
+            
+            return result;
+            /*throw new NotImplementedException();*/
         }
     }
 }
