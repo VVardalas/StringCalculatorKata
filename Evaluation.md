@@ -25,7 +25,7 @@ Q3) L'encapsulation des données, ne pas donner accès à ce dont une classe n'a pa
 
 Q4) Les données sont saisies en dur dans le calculTrainer
 
-Q5)
+Q5) Externalisation
 
 Q6)
  
