@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace SolidExercices
 {
-    class Soustraction
+    public class Soustraction : InterfaceOperations
     {
+        public bool CanCalcul(string operation)
+        {
+            return operation.Contains('-');
+        }
         public decimal Calculate(string operation)
         {
             decimal result = 0;

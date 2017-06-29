@@ -19,7 +19,7 @@ Réponses aux questions posées
 
 Q1) On peut définir des classes avec des comportements répondants à nos attentes pour éviter la redondance de conditions
 
-Q2)
+Q2) Le but des objets est qu'ils contiennent à la fois des données et des comportements
 
 Q3)
 
