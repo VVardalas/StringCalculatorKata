@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Linq;
-using System.Data;//import this namespace
+using System.Data;
+using System.Globalization;
+
+//import this namespace
 
 namespace SolidExercices
 {
@@ -8,15 +11,46 @@ namespace SolidExercices
     {
         public decimal Calculate(string operation)
         {
-            
-            string[] numbers = operation.Split('+');
             decimal result = 0;
-            foreach (var number in numbers)
+            if (operation.Contains("+"))
             {
-                result += Convert.ToDecimal(number);
+                string[] numbers = operation.Split('+');
+                foreach (var number in numbers)
+                {
+                    result += Convert.ToDecimal(number);
+                }
             }
-            
+            if (operation.Contains("-"))
+            {
+                string[] numbers = operation.Split('-');
+                result = Convert.ToDecimal(numbers[0]);
+                for (int i = 1; i < numbers.Length; i++)
+                {
+                    result -= Convert.ToDecimal(numbers[i]);
+                }
+            }
+            if (operation.Contains("*"))
+            {
+                string[] numbers = operation.Split('*');
+                result = Convert.ToDecimal(numbers[0]);
+                for (int i = 1; i < numbers.Length; i++)
+                {
+                    result *= Convert.ToDecimal(numbers[i]);
+                }
+            }
+            if (operation.Contains("/"))
+            {
+                string[] numbers = operation.Split('/');
+                result = Convert.ToDecimal(numbers[0]);
+                for (int i = 1; i < numbers.Length; i++)
+                {
+                    result /= Convert.ToDecimal(numbers[i]);
+                }
+            }
+
+
             return result;
+
             /*throw new NotImplementedException();*/
         }
     }
