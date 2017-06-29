@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace SolidExercices
 {
-    class Multiplication
+    public class Multiplication : InterfaceOperations
     {
+        public bool CanCalcul(string operation)
+        {
+            return operation.Contains('*');
+        }
+
         public decimal Calculate(string operation)
         {
             decimal result = 0;
