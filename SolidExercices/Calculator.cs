@@ -15,9 +15,10 @@ namespace SolidExercices
             if (operation.Contains("+"))
             {
                 string[] numbers = operation.Split('+');
-                foreach (var number in numbers)
+                result = Convert.ToDecimal(numbers[0]);
+                for (int i = 1; i < numbers.Length; i++)
                 {
-                    result += Convert.ToDecimal(number);
+                    result += Convert.ToDecimal(numbers[i]);
                 }
             }
             if (operation.Contains("-"))
