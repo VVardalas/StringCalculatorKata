@@ -21,7 +21,7 @@ namespace SolidExercices
                     result += Convert.ToDecimal(numbers[i]);
                 }
             }
-            if (operation.Contains("-"))
+            else if (operation.Contains("-"))
             {
                 string[] numbers = operation.Split('-');
                 result = Convert.ToDecimal(numbers[0]);
@@ -30,7 +30,7 @@ namespace SolidExercices
                     result -= Convert.ToDecimal(numbers[i]);
                 }
             }
-            if (operation.Contains("*"))
+            else if (operation.Contains("*"))
             {
                 string[] numbers = operation.Split('*');
                 result = Convert.ToDecimal(numbers[0]);
@@ -39,7 +39,7 @@ namespace SolidExercices
                     result *= Convert.ToDecimal(numbers[i]);
                 }
             }
-            if (operation.Contains("/"))
+            else if (operation.Contains("/"))
             {
                 string[] numbers = operation.Split('/');
                 result = Convert.ToDecimal(numbers[0]);
@@ -49,7 +49,12 @@ namespace SolidExercices
                 }
             }
 
-
+            else
+            {
+                throw new NotImplementedException();
+                
+            }
+            
             return result;
 
             /*throw new NotImplementedException();*/
